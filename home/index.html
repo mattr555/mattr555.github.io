@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" ng-app="NewTabApp">
+<head>
+	<meta charset="UTF-8">
+	<title>New Tab</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div ng-controller="TimeCtrl">{{time}}</div>
+	<div ng-controller="LinkCtrl">
+		<input type="text" id="search" ng-model="search.name" placeholder="/">
+		<keybinding on="/" invoke="focusSearch()">
+		<ul>
+			<li ng-repeat="(name, link) in links | filter:search:searchComparator">
+				<a href="{{link.url}}">{{name}}</a>
+				<small>{{link.keys}}</small>
+				<a href="#" ng-click="removeLink(name)">[-]</a>
+				<keybinding on="{{link.keys}}" invoke="gotoLink(link.url)">
+			</li>
+		</ul>
+		<button id="expand-form">+</button>
+		<form ng-submit="addLink()" id="add-form" style="display:none;">
+			Name: <input type="text" ng-model="new.name" required>
+			URL: <input type="text" ng-model="new.url" required>
+			Keys: <input type="text" ng-model="new.keys">
+			<input type="submit">
+		</form>
+	</div>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+	<script src="angular-local-storage.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
