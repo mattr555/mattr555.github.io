@@ -1,3 +1,45 @@
+function searchComparator(a, e){
+  if (a.indexOf(e) !== -1){
+    return true;
+  }
+  var s = a.split(' ');
+  var t = '';
+  s.forEach(function(i){
+    t = t + i.substring(0,1);
+  });
+  if (t.indexOf(e) !== -1){
+    return true;
+  }
+  return false;
+}
+
+function padZeros(n, len){
+  var s = n.toString();
+  while (s.length < len){
+    s = '0' + s
+  }
+  return s;
+}
+
+function linkFilterFn(links, search){
+  var l = [];
+  angular.forEach(links, function(item, key){
+    item['name'] = key;
+    l.push(item);
+  });
+  if (!search){
+    return l;
+  } else {
+    var m = [];
+    l.forEach(function(i){
+      if (searchComparator(i.name, search)){
+        m.push(i);
+      }
+    });
+    return m;
+  }
+}
+
 var app = angular.module('NewTabApp', ['LocalStorageModule'])
 
 .directive('keybinding', function () {
@@ -8,15 +50,11 @@ var app = angular.module('NewTabApp', ['LocalStorageModule'])
       Mousetrap.bind(attr.on, scope.invoke);
     }
   };
-});
+})
 
-function padZeros(n, len){
-  var s = n.toString();
-  while (s.length < len){
-    s = '0' + s
-  }
-  return s;
-}
+.filter('linkFilter', function(){
+  return linkFilterFn;
+});
 
 function TimeCtrl($scope, $interval){
   $interval(function(){
@@ -51,19 +89,11 @@ function LinkCtrl($scope, localStorageService){
     return false;
   }
 
-  $scope.searchComparator = function(a, e){
-    if (a.indexOf(e) !== -1){
-      return true;
+  $scope.checkEnter = function(e){
+    var l = linkFilterFn($scope.links, $scope.search);
+    if ($event.keyCode === 13 && l.length == 1){
+      window.location = l[0]['url'];
     }
-    var s = a.split(' ');
-    var t = '';
-    s.forEach(function(i){
-      t = t + i.substring(0,1);
-    });
-    if (t.indexOf(e) !== -1){
-      return true;
-    }
-    return false;
   }
 
   $('#expand-form').click(function(){
