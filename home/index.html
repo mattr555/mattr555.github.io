@@ -13,8 +13,8 @@
 		<ul>
 			<li ng-repeat="link in links | linkFilter:search">
 				<a href="{{link.url}}">{{link.name}}</a>
-				<small>[{{link.keys}}] <a href="#" ng-click="removeLink(link.name)">[-]</a></small>
-				<keybinding on="{{link.keys}}" invoke="gotoLink(link.url)" />
+				<small ng-if="link.keys">[{{link.keys}}] <keybinding on="{{link.keys}}" invoke="gotoLink(link.url)" /></small>
+				<small><a href="#" ng-click="removeLink(link.name)">[-]</a></small>
 			</li>
 		</ul>
 		<button id="expand-form">+</button>
