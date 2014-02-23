@@ -90,9 +90,11 @@ function LinkCtrl($scope, localStorageService){
   }
 
   $scope.checkEnter = function(e){
-    var l = linkFilterFn($scope.links, $scope.search);
-    if ($event.keyCode === 13 && l.length == 1){
-      window.location = l[0]['url'];
+    if ($event.keyCode === 13){
+      var l = linkFilterFn($scope.links, $scope.search);
+      if (l.length === 1){
+        window.location = l[0]['url'];
+      }
     }
   }
 
