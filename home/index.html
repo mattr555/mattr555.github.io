@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div ng-controller="TimeCtrl">{{time}}</div>
+	<div class="time" ng-controller="TimeCtrl">{{time}}</div>
 	<div ng-controller="LinkCtrl">
 		<input type="text" id="search" ng-model="search" ng-keydown="checkEnter($event)" placeholder="/">
 		<keybinding on="/" invoke="focusSearch()" />
@@ -14,7 +14,7 @@
 			<li ng-repeat="link in links | linkFilter:search">
 				<a href="{{link.url}}">{{link.name}}</a>
 				<small ng-if="link.keys">[{{link.keys}}] <keybinding on="{{link.keys}}" invoke="gotoLink(link.url)" /></small>
-				<small><a href="#" ng-click="removeLink(link.name)">[-]</a></small>
+				<small><a href="#" class="del-link" ng-click="removeLink(link.name)">[-]</a></small>
 			</li>
 		</ul>
 		<button id="expand-form">+</button>
