@@ -6,8 +6,8 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="time" ng-controller="TimeCtrl">{{time}}</div>
-	<div ng-controller="LinkCtrl">
+	<div ng-controller="TimeCtrl"><span class="time">{{time}}</span><br>{{date}}</div>
+	<div ng-controller="LinkCtrl" id="link-div">
 		<input type="text" id="search" ng-model="search" ng-keydown="checkEnter($event)" placeholder="/">
 		<keybinding on="/" invoke="focusSearch()" />
 		<ul>
@@ -17,16 +17,20 @@
 				<small><a href="#" class="del-link" ng-click="removeLink(link.name)">[-]</a></small>
 			</li>
 		</ul>
-		<button id="expand-form">+</button>
+		<button ng-click="expandForm()">+</button>
 		<form ng-submit="addLink()" id="add-form" style="display:none;">
-			Name: <input type="text" ng-model="new.name" required>
-			URL: <input type="url" ng-model="new.url" required>
-			Keys: <input type="text" ng-model="new.keys">
+			Name: <input type="text" ng-model="new.name" required><br>
+			URL: <input type="url" ng-model="new.url" required><br>
+			Keys: <input type="text" ng-model="new.keys"><br>
 			<input type="submit">
 		</form>
 	</div>
+	<div id="time-div">
+		<img src="http://imgs.xkcd.com/comics/now.png" height="500">
+	</div>
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
 	<script src="angular-local-storage.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
 	<script src="app.js"></script>

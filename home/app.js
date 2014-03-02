@@ -58,8 +58,8 @@ var app = angular.module('NewTabApp', ['LocalStorageModule'])
 
 function TimeCtrl($scope, $interval){
   $interval(function(){
-    var t = new Date();
-    $scope.time = padZeros(t.getHours(), 2) + ':' + padZeros(t.getMinutes(), 2) + ':' + padZeros(t.getSeconds(), 2);
+    $scope.time = moment().format('H:mm:ss');
+    $scope.date = moment().format('dddd MMMM Do')
   }, 1000);
 }
 
@@ -98,7 +98,7 @@ function LinkCtrl($scope, localStorageService){
     }
   }
 
-  $('#expand-form').click(function(){
+  $scope.expandForm = function(){
     $('#add-form').slideDown('fast');
-  })
+  }
 }

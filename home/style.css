@@ -11,3 +11,11 @@ a {
 .time {
 	font-size: 48px;
 }
+
+#link-div {
+	float: left;
+}
+
+#time-div {
+	float: right;
+}
