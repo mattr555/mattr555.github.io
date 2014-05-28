@@ -1,7 +1,7 @@
 import jinja2, csv, time
 
 template = jinja2.Template(open('template.html').read())
-row_headers = ['title', 'url', 'type', 'description', 'technology', 'scrot']
+row_headers = ['title', 'url', 'type', 'description', 'technology', 'scrot', 'typeurl']
 projects = []
 
 with open('projects.csv') as f:

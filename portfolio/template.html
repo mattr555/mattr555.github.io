@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1>Project Portfolio</h1>
+	<h1>Matt's Project Portfolio</h1>
 	{% if projects %}
 		<table>
 			<tr>
@@ -23,7 +23,11 @@
 				{%else%}
 				<td>{{project.title}}</td>
 				{%endif%}
+				{% if project.typeurl %}
+				<td><a href="{{project.typeurl}}">{{project.type}}</a></td>
+				{%else%}
 				<td>{{project.type}}</td>
+				{%endif%}
 				<td>{{project.description}}</td>
 				<td>{{project.technology}}
 				<td>{% if project.scrot %}<img src="{{project.scrot}}" />{%else%}None :({%endif%}</td>
