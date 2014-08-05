@@ -1,0 +1,113 @@
+html{
+	font-family: "Arimo", sans-serif;
+	background-color: #FFFFF0;
+}
+
+html, body {
+	margin: 0;
+}
+
+.header{
+	color: #FFFFF0;
+	background-color: rgb(67,124,92);
+	font-family: "Josefin Slab", serif;
+	width: 100%;
+	height: 100px;
+	text-decoration: underline;
+	line-height: 100px;
+	font-size: 48px;
+	position: fixed;
+	top: 0px;
+	text-align: center;
+}
+
+.sidebar{
+	width: 50px;
+	height: 50px;
+	color: #FFFFF0;
+	background-color: transparent;
+	float: left;
+	position: fixed;
+	top: 0px;
+	font-size: 15px;
+	transition-property: width, background-color, height;
+	transition-duration: .5s, .4s, 0s;
+	transition-delay: 0s, .1s, .5s;
+}
+
+.sidebar:hover{
+	width: 300px;
+	min-height: 350px;
+	height: 75%;
+	transition-property: width, background-color, height;
+	transition-duration: .5s, .4s, 0s;
+	transition-delay: 0s, .1s, 0s;
+	background-color: rgba(67,97,124,.7);
+}
+
+.fa-bars{
+	font-size: 35px;
+	color: white;
+	padding-left: 3px;
+	float: left;
+	margin-top: 30px;
+	margin-left: 25px;
+	margin-bottom: 35px;
+}
+
+#mattr{
+	float: right;
+	clear: none;
+	margin-right: 20px;
+	margin-top: 20px;
+}
+
+.sidebar:hover #mattr:hover{
+	background-color: initial;
+}
+
+.slinks{
+	clear: both;
+	color: transparent;
+	background-color: transparent;
+	display: none;
+	text-decoration: none;
+	height: 50px;
+	line-height: 50px;
+	transition-property: background-color;
+	transition-duration: .5s;
+	transition-delay: 0s;
+}
+
+.sidebar:hover .slinks{
+	display:block;
+	color: #FFFFF0;
+	transition-property: color;
+	transition-duration: .1s;
+	transition-delay: .5s;
+	padding-left: 20px;
+}
+
+.sidebar:hover .slinks:hover{
+	display:block;
+	background-color: rgba(67,97,124,.5);
+	transition-property: background-color;
+	transition-duration: .5s;
+	transition-delay: 0s;
+}
+
+.slinks i {
+	margin-right: 20px;
+}
+
+.content {
+	margin-top: 120px;
+	margin-right: 20%;
+	margin-left: 20%;
+
+}
+
+.content h1 {
+	color: orange;
+	font-family: "Josefin Slab", serif;
+}
