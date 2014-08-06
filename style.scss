@@ -1,0 +1,138 @@
+$serif_stack: "Josefin Slab", serif;
+$sans_stack: "Arimo", sans-serif;
+$num_slinks: 6;
+
+$offwhite: #FFFFF0;
+$headergreen: rgb(67,124,92);
+$sidebarblue: rgba(67,97,124,.7);
+$slinkhover: rgba(67,97,124,.5);
+
+html{
+	font-family: $sans_stack;
+	background-color: $offwhite;
+}
+
+html, body {
+	margin: 0;
+}
+
+.header{
+	color: $offwhite;
+	background-color: $headergreen;
+	font-family: $serif_stack;
+	font-size: 48px;
+	text-decoration: underline;
+	text-align: center;
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	top: 0px;
+	position: fixed;
+}
+
+.sidebar{
+	width: 50px;
+	height: 50px;
+	color: $offwhite;
+	background-color: transparent;
+	float: left;
+	position: fixed;
+	top: 0;
+	font-size: 15px;
+	transition: {
+		property: width, background-color, height;
+		duration: .25s, .15s, 0s;
+		delay: 0s, .1s, .25s;
+	}
+	
+}
+
+.sidebar:hover{
+	width: 300px;
+	min-height: 100px + $num_slinks*50px;
+	height: 75%;
+	background-color: $sidebarblue;
+	transition: {
+		property: width, background-color;
+		duration: .5s, .4s;
+		delay: 0s, .1s;
+	}
+}
+
+.fa-bars{
+	font-size: 35px;
+	color: white;
+	padding-left: 3px;
+	float: left;
+	margin: {
+		top: 30px;
+		left: 25px;
+		bottom: 35px;
+	}
+}
+
+.slinks{
+	clear: both;
+	color: transparent;
+	background-color: transparent;
+	display: none;
+	text-decoration: none;
+	height: 50px;
+	line-height: 50px;
+	transition: {
+		property: background-color;
+		duration: .5s;
+		delay: 0s;
+	}
+
+	i {
+		margin-right: 20px;
+	}
+}
+
+.sidebar:hover .slinks{
+	display:block;
+	color: $offwhite;
+	padding-left: 20px;
+	transition: {
+		property: color;
+		duration: .1s;
+		delay: .5s;
+	}
+}
+
+.sidebar:hover .slinks:hover{
+	background-color: $slinkhover;
+	transition: {
+		property: background-color;
+		duration: .5s;
+		delay: 0s;
+	}	
+}
+
+#mattr{
+	@extend .slinks;
+
+	float: right;
+	clear: none;
+	margin: {
+		top: 20px;
+		right: 20px;
+	}
+}
+
+.sidebar:hover #mattr:hover{
+	background-color: rgba(0,0,0,0);
+}
+
+.content {
+	margin: {
+		top: 120px;
+		right: 20%;
+		left: 20%;
+	}
+	h1 {
+		color: orange;
+		font-family: $serif_stack;
+	}
+}
