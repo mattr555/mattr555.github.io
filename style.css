@@ -31,7 +31,7 @@ html, body {
   transition-duration: .25s, .15s, 0s;
   transition-delay: 0s, .1s, .25s; }
 
-.sidebar:hover {
+.sidebar.hovered {
   width: 300px;
   min-height: 400px;
   height: 75%;
@@ -63,7 +63,7 @@ html, body {
   .slinks i, #mattr i {
     margin-right: 20px; }
 
-.sidebar:hover .slinks, .sidebar:hover #mattr {
+.sidebar.hovered .slinks, .sidebar.hovered #mattr {
   display: block;
   color: ivory;
   padding-left: 20px;
@@ -71,7 +71,7 @@ html, body {
   transition-duration: .1s;
   transition-delay: .5s; }
 
-.sidebar:hover .slinks:hover, .sidebar:hover #mattr:hover {
+.sidebar.hovered .slinks:hover, .sidebar.hovered #mattr:hover {
   background-color: rgba(67, 97, 124, 0.5);
   transition-property: background-color;
   transition-duration: .5s;
@@ -83,8 +83,12 @@ html, body {
   margin-top: 20px;
   margin-right: 20px; }
 
-.sidebar:hover #mattr:hover {
+.sidebar.hovered #mattr:hover {
   background-color: transparent; }
+
+.fa {
+  display: inline-block;
+  width: 10px; }
 
 .content {
   margin-top: 120px;

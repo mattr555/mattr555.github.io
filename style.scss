@@ -47,7 +47,7 @@ html, body {
 	
 }
 
-.sidebar:hover{
+.sidebar.hovered{
 	width: 300px;
 	min-height: 100px + $num_slinks*50px;
 	height: 75%;
@@ -90,7 +90,7 @@ html, body {
 	}
 }
 
-.sidebar:hover .slinks{
+.sidebar.hovered .slinks{
 	display:block;
 	color: $offwhite;
 	padding-left: 20px;
@@ -101,7 +101,7 @@ html, body {
 	}
 }
 
-.sidebar:hover .slinks:hover{
+.sidebar.hovered .slinks:hover{
 	background-color: $slinkhover;
 	transition: {
 		property: background-color;
@@ -121,8 +121,13 @@ html, body {
 	}
 }
 
-.sidebar:hover #mattr:hover{
+.sidebar.hovered #mattr:hover{
 	background-color: rgba(0,0,0,0);
+}
+
+.fa {
+	display: inline-block;
+	width: 10px; //make text line up
 }
 
 .content {
