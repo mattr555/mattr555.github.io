@@ -6,6 +6,7 @@ $offwhite: #FFFFF0;
 $headergreen: rgb(67,124,92);
 $sidebarblue: rgba(67,97,124,.7);
 $slinkhover: rgba(67,97,124,.5);
+$headerorange: rgb(218,143,7);
 
 html{
 	font-family: $sans_stack;
@@ -137,7 +138,81 @@ html, body {
 		left: 20%;
 	}
 	h1 {
-		color: orange;
+		color: $headerorange;
 		font-family: $serif_stack;
+	}
+}
+
+.port {
+	height: auto;
+	width: auto;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+.pitem {
+	height: 400px;
+	width: 37%;
+	background-color: rgba(204,204,204,.5);
+	border-radius: 10px;
+	margin-bottom: 50px;
+	color: rgb(112,112,112);
+	padding: 10px 10px;
+
+	&:nth-child(odd) {
+		float: left;
+		margin-left: 50px;
+	}
+
+	&:nth-child(even) {
+		float: right;
+		margin-right: 50px;
+	}
+
+	img {
+		display: block;
+		margin: 5px auto 10px auto;
+		height: auto;
+		max-height: 50%;
+		width: 95%;
+		max-width: 300px;
+	}
+
+	.titlelink {
+		color: $headerorange;
+		font-family: $serif_stack;
+		display: block;
+		text-align: center;
+		text-decoration: none;
+		font-size: 24px;
+		font-weight: bold;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+	.langs img {
+		display: inline-block;
+		height: 30px;
+		width: 30px;
+	}
+}
+
+@media screen and (max-width: 900px){
+	.port, .content {
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+	.port .pitem {
+		margin-left: 0;
+		margin-right: 0;
+		width: 45%;
 	}
 }

@@ -95,5 +95,60 @@ html, body {
   margin-right: 20%;
   margin-left: 20%; }
   .content h1 {
-    color: orange;
+    color: #da8f07;
     font-family: "Josefin Slab", serif; }
+
+.port {
+  height: auto;
+  width: auto;
+  margin-left: 20%;
+  margin-right: 20%; }
+
+.pitem {
+  height: 400px;
+  width: 37%;
+  background-color: rgba(204, 204, 204, 0.5);
+  border-radius: 10px;
+  margin-bottom: 50px;
+  color: #707070;
+  padding: 10px 10px; }
+  .pitem:nth-child(odd) {
+    float: left;
+    margin-left: 50px; }
+  .pitem:nth-child(even) {
+    float: right;
+    margin-right: 50px; }
+  .pitem img {
+    display: block;
+    margin: 5px auto 10px auto;
+    height: auto;
+    max-height: 50%;
+    width: 95%;
+    max-width: 300px; }
+  .pitem .titlelink {
+    color: #da8f07;
+    font-family: "Josefin Slab", serif;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold; }
+  .pitem a {
+    text-decoration: none;
+    color: inherit; }
+  .pitem a:hover {
+    text-decoration: underline; }
+  .pitem .langs img {
+    display: inline-block;
+    height: 30px;
+    width: 30px; }
+
+@media screen and (max-width: 900px) {
+  .port, .content {
+    margin-left: 5%;
+    margin-right: 5%; }
+
+  .port .pitem {
+    margin-left: 0;
+    margin-right: 0;
+    width: 45%; } }
