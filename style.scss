@@ -169,13 +169,21 @@ html, body {
 		margin-right: 50px;
 	}
 
-	img {
-		display: block;
-		margin: 5px auto 10px auto;
-		height: auto;
-		max-height: 50%;
-		width: 95%;
+	.scrot {
 		max-width: 300px;
+	}
+
+	.imgwrapinner {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.imgwrap {
+		display: table;
+		width: 100%;
+		margin: 5px auto 10px auto;
+		height: 50%;
+		max-height: 50%;
 	}
 
 	.titlelink {
@@ -201,6 +209,8 @@ html, body {
 		display: inline-block;
 		height: 30px;
 		width: 30px;
+		margin-top: 10px;
+		margin-right: 2px;
 	}
 }
 
