@@ -31,6 +31,18 @@ html, body {
 	position: fixed;
 }
 
+.headroom {
+    transition: transform 200ms ease-in;
+
+    &--pinned {
+    	transform: translateY(0%);
+    }
+
+    &--unpinned {
+    	transform: translateY(-100%);
+    }
+}
+
 .sidebar{
 	width: 50px;
 	height: 50px;

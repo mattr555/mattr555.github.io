@@ -22,4 +22,7 @@ $(document).ready(function(){
 		console.log('here!');
 		$('html, body').animate({scrollTop: $('#portfolio').offset().top - 105}, 2000);
 	});
+
+	//headroom.js
+	$('.header').headroom();
 });
