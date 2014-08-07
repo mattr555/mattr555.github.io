@@ -16,4 +16,10 @@ $(document).ready(function(){
 	$('html').on('touchstart', function(){
 		$('.sidebar').removeClass('hovered');
 	});
+
+	//portfolio smoothscroll
+	$('#portlink').click(function(){
+		console.log('here!');
+		$('html, body').animate({scrollTop: $('#portfolio').offset().top - 105}, 2000);
+	});
 });
