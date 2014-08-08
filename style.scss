@@ -84,6 +84,14 @@ html, body {
 	}
 }
 
+.headroom--unpinned + .sidebar .fa-bars {
+	color: rgb(204,204,204);
+}
+
+.headroom--unpinned + .sidebar.hovered .fa-bars {
+	color: $offwhite;
+}
+
 .slinks{
 	clear: both;
 	color: transparent;
@@ -170,6 +178,8 @@ html, body {
 	margin-bottom: 50px;
 	color: rgb(112,112,112);
 	padding: 10px 10px;
+	position: relative;
+	z-index: -2;
 
 	&:nth-child(odd) {
 		float: left;
@@ -182,7 +192,8 @@ html, body {
 	}
 
 	.scrot {
-		max-width: 300px;
+		width: 100%;
+		max-width: 100%;
 	}
 
 	.imgwrapinner {
@@ -217,12 +228,16 @@ html, body {
 		text-decoration: underline;
 	}
 
-	.langs img {
-		display: inline-block;
-		height: 30px;
-		width: 30px;
-		margin-top: 10px;
-		margin-right: 2px;
+	.langs {
+		position: absolute;
+		bottom: 10px;
+		img {
+			display: inline-block;
+			height: 30px;
+			width: 30px;
+			margin-top: 10px;
+			margin-right: 2px;
+		}
 	}
 }
 

@@ -56,6 +56,12 @@ html, body {
   margin-left: 25px;
   margin-bottom: 35px; }
 
+.headroom--unpinned + .sidebar .fa-bars {
+  color: #cccccc; }
+
+.headroom--unpinned + .sidebar.hovered .fa-bars {
+  color: ivory; }
+
 .slinks, #mattr {
   clear: both;
   color: transparent;
@@ -118,7 +124,9 @@ html, body {
   border-radius: 10px;
   margin-bottom: 50px;
   color: #707070;
-  padding: 10px 10px; }
+  padding: 10px 10px;
+  position: relative;
+  z-index: -2; }
   .pitem:nth-child(odd) {
     float: left;
     margin-left: 50px; }
@@ -126,7 +134,8 @@ html, body {
     float: right;
     margin-right: 50px; }
   .pitem .scrot {
-    max-width: 300px; }
+    width: 100%;
+    max-width: 100%; }
   .pitem .imgwrapinner {
     display: table-cell;
     vertical-align: middle; }
@@ -149,12 +158,15 @@ html, body {
     color: inherit; }
   .pitem a:hover {
     text-decoration: underline; }
-  .pitem .langs img {
-    display: inline-block;
-    height: 30px;
-    width: 30px;
-    margin-top: 10px;
-    margin-right: 2px; }
+  .pitem .langs {
+    position: absolute;
+    bottom: 10px; }
+    .pitem .langs img {
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+      margin-top: 10px;
+      margin-right: 2px; }
 
 @media screen and (max-width: 900px) {
   .port, .content {
