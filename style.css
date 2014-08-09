@@ -19,10 +19,13 @@ html, body {
   position: fixed; }
 
 .headroom {
+  -webkit-transition: -webkit-transform 200ms ease-in;
   transition: transform 200ms ease-in; }
   .headroom--pinned {
+    -webkit-transform: translateY(0%);
     transform: translateY(0%); }
   .headroom--unpinned {
+    -webkit-transform: translateY(-100%);
     transform: translateY(-100%); }
 
 .sidebar {
@@ -110,6 +113,12 @@ html, body {
   .content h1 {
     color: #da8f07;
     font-family: "Josefin Slab", serif; }
+  .content a {
+    color: #666;
+    text-decoration: none; }
+    .content a:hover {
+      color: #000;
+      text-decoration: underline; }
 
 .port {
   height: auto;
@@ -123,7 +132,7 @@ html, body {
   background-color: rgba(204, 204, 204, 0.5);
   border-radius: 10px;
   margin-bottom: 50px;
-  color: #707070;
+  color: #333;
   padding: 10px 10px;
   position: relative;
   z-index: -2; }
@@ -158,6 +167,10 @@ html, body {
     color: inherit; }
   .pitem a:hover {
     text-decoration: underline; }
+  .pitem .typelink {
+    color: #666; }
+    .pitem .typelink:hover {
+      color: black; }
   .pitem .langs {
     position: absolute;
     bottom: 10px; }

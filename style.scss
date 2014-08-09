@@ -32,13 +32,16 @@ html, body {
 }
 
 .headroom {
+	-webkit-transition: -webkit-transform 200ms ease-in;
     transition: transform 200ms ease-in;
 
     &--pinned {
+    	-webkit-transform: translateY(0%);
     	transform: translateY(0%);
     }
 
     &--unpinned {
+    	-webkit-transform: translateY(-100%);
     	transform: translateY(-100%);
     }
 }
@@ -161,6 +164,14 @@ html, body {
 		color: $headerorange;
 		font-family: $serif_stack;
 	}
+	a {
+		color: #666;
+		text-decoration: none;
+		&:hover {
+			color: #000;
+			text-decoration: underline;
+		}
+	}
 }
 
 .port {
@@ -176,7 +187,7 @@ html, body {
 	background-color: rgba(204,204,204,.5);
 	border-radius: 10px;
 	margin-bottom: 50px;
-	color: rgb(112,112,112);
+	color: #333;
 	padding: 10px 10px;
 	position: relative;
 	z-index: -2;
@@ -226,6 +237,13 @@ html, body {
 
 	a:hover {
 		text-decoration: underline;
+	}
+
+	.typelink{
+		color: #666;
+		&:hover {
+			color: black;
+		}
 	}
 
 	.langs {
