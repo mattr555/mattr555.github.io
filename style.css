@@ -1,12 +1,12 @@
 html {
   font-family: "Arimo", sans-serif;
-  background-color: ivory; }
+  background-color: #FFFFF0; }
 
 html, body {
   margin: 0; }
 
 .header {
-  color: ivory;
+  color: #FFFFF0;
   background-color: #437c5c;
   font-family: "Josefin Slab", serif;
   font-size: 48px;
@@ -31,7 +31,7 @@ html, body {
 .sidebar {
   width: 50px;
   height: 50px;
-  color: ivory;
+  color: #FFFFF0;
   background-color: transparent;
   float: left;
   position: fixed;
@@ -63,7 +63,7 @@ html, body {
   color: #cccccc; }
 
 .headroom--unpinned + .sidebar.hovered .fa-bars {
-  color: ivory; }
+  color: #FFFFF0; }
 
 .slinks, #mattr {
   clear: both;
@@ -81,7 +81,7 @@ html, body {
 
 .sidebar.hovered .slinks, .sidebar.hovered #mattr {
   display: block;
-  color: ivory;
+  color: #FFFFF0;
   padding-left: 20px;
   transition-property: color;
   transition-duration: .1s;
@@ -110,15 +110,16 @@ html, body {
   margin-top: 120px;
   margin-right: 20%;
   margin-left: 20%; }
-  .content h1 {
-    color: #da8f07;
-    font-family: "Josefin Slab", serif; }
   .content a {
     color: #666;
     text-decoration: none; }
     .content a:hover {
       color: #000;
       text-decoration: underline; }
+
+h1, h2 {
+  color: #da8f07;
+  font-family: "Josefin Slab", serif; }
 
 .port {
   height: auto;
@@ -190,3 +191,5 @@ html, body {
     margin-left: 0;
     margin-right: 0;
     width: 45%; } }
+
+/*# sourceMappingURL=style.css.map */
