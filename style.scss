@@ -160,10 +160,7 @@ html, body {
 		right: 20%;
 		left: 20%;
 	}
-	h1 {
-		color: $headerorange;
-		font-family: $serif_stack;
-	}
+
 	a {
 		color: #666;
 		text-decoration: none;
@@ -172,6 +169,11 @@ html, body {
 			text-decoration: underline;
 		}
 	}
+}
+
+h1, h2 {
+	color: $headerorange;
+	font-family: $serif_stack;
 }
 
 .port {
