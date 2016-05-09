@@ -26,17 +26,17 @@ $(document).ready(function(){
     $('#sadform').submit(function(e){
         e.preventDefault();
         var v = $inp.val();
-        if (Math.random() > 0.5){
-            v = v.toLowerCase();
-        } else {
-            v = v.toUpperCase();
-        }
-
-        if (Math.random() > 0.3){
+        if (Math.random() > 0.2){
             v += phrases[Math.floor(Math.random() * phrases.length)];
             v = spaces(v);
         } else {
             v = spaces(v) + '\n' + spaces(v.slice(1), '\n');
+        }
+
+        if (Math.random() > 0.5){
+            v = v.toLowerCase();
+        } else {
+            v = v.toUpperCase();
         }
         $out.text(v);
     })

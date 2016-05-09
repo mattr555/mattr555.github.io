@@ -1,0 +1,29 @@
+html, body {
+    font-family: Arial, sans-serif;
+    background-color: aqua;
+    text-align: center;
+}
+
+h4 {
+    margin-bottom: .3em;
+}
+
+.wrap {
+    width: 100%;
+    position: relative;
+}
+
+pre {
+    text-align: left;
+}
+
+.center {
+    margin: 0 auto;
+    width: 30%;
+}
+
+#sadout {
+    color: #ff59db;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
