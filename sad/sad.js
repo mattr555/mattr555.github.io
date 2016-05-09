@@ -8,7 +8,9 @@ $(document).ready(function(){
         '私は菜食主義者です',
         '2003',
         '2001',
-        'arizonaicedout'
+        'arizonaicedout',
+        'emotions',
+        'gatorade'
     ]
 
     function spaces(s, del){
@@ -16,6 +18,17 @@ $(document).ready(function(){
         var del = del || ' ';
         for (var i = 0; i < s.length; i++){
             o += s.charAt(i) + del;
+        }
+        return o;
+    }
+
+    function fullwidth(s){
+        var o = '';
+        for (var i = 0; i < s.length; i++){
+            var c = s.charCodeAt(i);
+            if (c >= 0x20 && c <= 0xef){
+                o += String.fromCharCode(c + 0xfee0);
+            }
         }
         return o;
     }
@@ -29,8 +42,10 @@ $(document).ready(function(){
         if (Math.random() > 0.2){
             v += phrases[Math.floor(Math.random() * phrases.length)];
             v = spaces(v);
-        } else {
+        } else if (Math.random() > 0.5){
             v = spaces(v) + '\n' + spaces(v.slice(1), '\n');
+        } else {
+            v = fullwidth(v);
         }
 
         if (Math.random() > 0.5){
@@ -39,5 +54,11 @@ $(document).ready(function(){
             v = v.toUpperCase();
         }
         $out.text(v);
+
+        if (Math.random() > 0.5){
+            $out.css('font-style', 'italic');
+        } else {
+            $out.css('font-style', 'normal');
+        }
     })
 })
