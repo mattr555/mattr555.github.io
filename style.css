@@ -118,7 +118,7 @@ html, body {
       text-decoration: underline; }
 
 h1, h2 {
-  color: #da8f07;
+  color: #db2800;
   font-family: "Josefin Slab", serif; }
 
 .port {
@@ -156,7 +156,7 @@ h1, h2 {
     height: 50%;
     max-height: 50%; }
   .pitem .titlelink {
-    color: #da8f07;
+    color: #db2800;
     font-family: "Josefin Slab", serif;
     display: block;
     text-align: center;
