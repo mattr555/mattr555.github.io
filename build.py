@@ -1,4 +1,4 @@
-import jinja2, csv, time
+import jinja2, csv, time, subprocess
 
 template = jinja2.Template(open('template.html').read())
 row_headers = ['title', 'url', 'type', 'description', 'langs', 'scrot', 'typeurl']
@@ -16,3 +16,5 @@ gentime = time.strftime('%c')
 
 with open('index.html', 'w') as f:
 	f.write(template.render({'projects': projects, 'time': gentime}))
+
+subprocess.call(["sass", "style.scss", "style.css"])

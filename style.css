@@ -144,11 +144,12 @@ h1, h2 {
     float: right;
     margin-right: 50px; }
   .pitem .scrot {
-    width: 100%;
-    max-width: 100%; }
+    max-width: 100%;
+    max-height: 200px; }
   .pitem .imgwrapinner {
     display: table-cell;
-    vertical-align: middle; }
+    vertical-align: middle;
+    text-align: center; }
   .pitem .imgwrap {
     display: table;
     width: 100%;

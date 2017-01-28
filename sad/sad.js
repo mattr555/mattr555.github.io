@@ -26,8 +26,10 @@ $(document).ready(function(){
         var o = '';
         for (var i = 0; i < s.length; i++){
             var c = s.charCodeAt(i);
-            if (c >= 0x20 && c <= 0xef){
+            if (c > 0x20 && c <= 0xef){
                 o += String.fromCharCode(c + 0xfee0);
+            } else {
+                o += s.charAt(i);
             }
         }
         return o;
