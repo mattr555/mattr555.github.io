@@ -6,27 +6,20 @@ I hereby claim:
 
   * I am an admin of http://mattr555.me
   * I am mattr555 (https://keybase.io/mattr555) on keybase.
-  * I have a public key with fingerprint 1D17 3009 76B4 7A11 C60F  28F8 14CF F481 7DC8 AD4E
+  * I have a public key with fingerprint CBE2 734C 0C8B C585 B04B  65FB F018 8FC7 B340 56FC
 
-To claim this, I am signing this object:
+To do so, I am signing this object:
 
 {
     "body": {
-        "client": {
-            "name": "keybase.io node.js client",
-            "version": "0.7.3"
-        },
         "key": {
-            "fingerprint": "1d17300976b47a11c60f28f814cff4817dc8ad4e",
+            "eldest_kid": "01204b9cf31b5f16c852374630772b03c8ff569db1cfa2350765a73a949efffc73c30a",
+            "fingerprint": "cbe2734c0c8bc585b04b65fbf0188fc7b34056fc",
             "host": "keybase.io",
-            "key_id": "14CFF4817DC8AD4E",
+            "key_id": "f0188fc7b34056fc",
+            "kid": "010192f2cfb3f1fb27917c9a3f88cbe82e6920eb20bf991e4dcbf24ad4d46d681b120a",
             "uid": "ce44f91fc90eb4092039987883ae3d00",
             "username": "mattr555"
-        },
-        "merkle_root": {
-            "ctime": 1420670899,
-            "hash": "91bccf5037cf4d38d69313859b2db976f012b051409cb5c69bda3e5d88f6f3eb0edc7e39ace1952f6ab10e6e44c00ce47e95b6df3561dd0bf6d1d45bc2c52384",
-            "seqno": 124558
         },
         "service": {
             "hostname": "mattr555.me",
@@ -35,37 +28,43 @@ To claim this, I am signing this object:
         "type": "web_service_binding",
         "version": 1
     },
-    "ctime": 1420670986,
+    "ctime": 1488063858,
     "expire_in": 157680000,
-    "prev": "d18dfd488aa060672c726cd645258c177763d69a47d036925dad869a945f0eed",
-    "seqno": 3,
+    "prev": "9c8cae4ea04a0310cd0fd2e4310743eafd01805c16fdc40a2612b9f60fcc7e2d",
+    "seqno": 13,
     "tag": "signature"
 }
 
-with the aforementioned key, yielding the PGP signature:
+which yields the signature:
 
 -----BEGIN PGP MESSAGE-----
-Version: GnuPG v1.4.12 (GNU/Linux)
+Version: Keybase OpenPGP v2.0.64
+Comment: https://keybase.io/crypto
 
-owFdkn1oHEUYxi9JlRoqFRUFKaGstCUSrzM7HztzQrU0iR+RCuJXUTx2vpI1d7fn
-7ia5GK/QYiLWa0jVgsaiAcVC0whqLQpCiUirVWg0WNFUEGuLgv4hVltrsc7Eitb9
-a4f39z7v87wzE5e35Jqbrj5yakv9w5mNTR//IHL3zLzTOuKJWA17hRFPliJdydxf
-JSxrr+D162ERpjofxSsrsdL5R9KVF5gOb1AnaRRXLAXyQR559Q6Hu2YTVXp1Uk0i
-p+VBBQMEAA+owEEIoaTA+MwwiKUxmMFASRYqrK1kX5xmF031FjWLkXI6eEN3t+M7
-N7D1nbjL1gYWC1JjbDg0kgMtMOA+QJyzgDEUaqQAcGCqkwuRymGWJYQQ57esk/6S
-LiZxvBhaZpFDIPYBDQDj3DoK0z7bxKGQ0hCAAmmwQkxRjiBihAtfCZvMAOgLQKCd
-LgWRlAsVIk0UY4YapAXQSgYa8VBqyIlvaCgg0NQalwBY/4HmRFBlEKFQKSAMVVBh
-IqQviY8YthFS/WgltuZ8TAiru3MyGEntfLu1/S9dvuz2WU3iLJZxyRb6sqxacJmz
-4aoDh7Qopnv/1iiKqKLsnf33UqFFL94HZ7TD07VqlOhi5AgSUAbs5+boQaupIFNG
-YcbCEFDb4svAp1JRTHzCJAyCgCK7uRAHCiDKfaJCxeyZY2KA1urflMj6DHutZBr1
-VsJsINFe/ammFUtyTc25Sy9pdq8213rZFf88ZdRYmjt005dPHH77SO2WZR9lN9SP
-jbedv3lNKVsFr5suju256/Y9uzeNbe/edu9Py8Jd93WOn95xdseZ+XNnv33wWf+Z
-z0/MbOsxh6YWbuv6sfD41NHv759eJ2vtx8+vbix5KP1j9NNf2tdm219v7P9597u6
-ZWRoIVh37egL0y/Pb5THp9oG+NMTmyaXvv9J23Ozv7/V8gVvffXhlqE3fnslqxU+
-OPk8x+mq06euyT9290vtX8XxLOw6eGASbFlzZ6MxsVB+cv/03hfndk1F7629tdYP
-v2bLv+uZvfGAOLxvq39MjN/x2a9nTpQe2HzV+Fzr9efGVu+8ct+8Jgc3bz3JV5R3
-vvlnz2TPN6NH5frX5pb/BQ==
-=JUHU
+yMNmAnicbVJ/TJVVGL4QAqIEmrA0TPgqNITb+X5/H5ZD4fIjfzREqI3o7vvOdw5+
+ivfCvd9FLsgQtTFwDlCmMibBhLEWbUWKYGlcJGij3WgwwVxQxEYoLXFzzqDoXJb/
+tM4/57zveZ7nfd5370Doc6YQv4cv1g59kZSz5DfsueAyvdcV6iijVLvmphLLqCNo
+5UIFGnIa1iO6RiVSgGYAp8oQs7TKY1qAEs+wIiewQBQZFbBQwpgXZE2lIVYYlgei
+wCsiq8icjDDGUGQhCxQqnsK6LR85Ch26zSCyUEWMyHIQQEmFvMSrpIjAYxUDWpII
+S2U5wAsYEuIhu9PHIOZUxYnMup3kSGBdsfc/+Ge+AS0zmIFYZTGNVUaUaRHKCosl
+iRSXGCTIDEAqA1QsyzTiNKhihlM0TuMETZBolTTu8+1akYOI47BMYygTDgcIlZVl
+SZQkVkGsBoAP6EQOm3IUEfRRxTAcPM9T5fEUyRbrEPkG6+vkPwgzieKpQofdsEN7
+Afk4ZBiFiT6e4S70AY8h1fqvhFXVbRqZIiEUI4dTt9uoRJogoaH7NGlOkoDASrwU
+T6GSQt2BrLoPwYuCBMjxlUHFRFKGElQQhxTAKYClAdQA1hjEkafIsUjBGhkq4CEt
+YA1yQGEEmlFlLAAMoYgYjfI1VWSzE22W+FTyiaZTz7cphsuBqPJ+z/sBJr8QU+Aq
+f996mUJWhz9bujgxbBmb159unDbyqJlgzl390ZrWqJb9IVc6G14tiJhurrbv8484
+9V20NTIhMSLg0l9LXT2Wkbb0UW/W5ZKc3TZvbkn7iZRvUnoDMh85h2LWDpwN2tia
+N1BZN1fRnbyjavyx5ZPZC/6umXtP+urkmTUTnovR58rTcmxPymrHezKyjD/bdfXD
+qtKsKD/rZMxt741UOSx79brwuo7sr9yBP3BzS+Oec50H82a3jLUntbrqv24M2r77
+l+u7jKqZyadBC1PK1cWbvyZvHj68dbE5Oqn36txv2mC4kfGH961Od0zL9wnxUa/X
+Tq1LMKVY7E5wnt/ZEfW2+YOhUxu6h4bYUuWV+vM/sd6FxB3scbfRtDd38Gle74Nt
+7fydA2mh88dGT7/J1OZPvdv04NPuJu9IVMhn9w9szmjJ4Jw/L+fEh22MymmZfXSl
+oq9qIjbWv63eao6spKnDrpBdf1+b7MgdOHlrTMJFtrV7zFPG1rm26Py4jze9fHxP
+UlPwzvt3ItypW+6NLt+W716vsBTlXEp7QZT9GoOr6cqZiwODN9Ln+rNv9oHfXQPN
+C/tHMxfjYp9P6B69XENPTIvBlslvXyrkTYEHcx8H3eo/8fkb8w+Tx6j1knlvr6Um
+gEU173gyu/q6w1L3ifrZbWjem1La4Gk4SW8fDjjzpWXV3Gt3N/XUeTZk8CPXxpoi
+038M/weZibbI
+=QnKS
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
