@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unix epoch 1500000000</title>
+</head>
+<body id="root">
+    <div id="time"></div>
+    <div id="countdown"></div>
+    <div id="rms"><img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Richard_Stallman_by_gisleh_01.jpg"></img></div>
+
+    <style>
+    body {
+        font-family: monospace;
+    }
+
+    .inverted{
+        background-color: black;
+        color: white;
+    }
+
+    div {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #time {
+        font-size: 30px;
+    }
+
+    #rms {
+        display: none;
+    }
+    .inverted #rms {
+        display: block;
+    }
+    </style>
+
+    <script>
+        time = document.getElementById('time');
+        countdown = document.getElementById('countdown');
+        root = document.getElementById('root');
+
+        target = 1500000000;
+        // target = 1499645800;
+        partyCalled = false;
+
+        function update(){
+            var curTime = Math.floor(new Date().getTime() / 1000);
+            time.innerHTML = curTime;
+
+            var delta = target - curTime;
+            var secs = (delta % 60) | 0;
+            delta /= 60;
+            var mins = (delta % 60) | 0;
+            delta /= 60;
+            var hours = (delta % 24) | 0;
+            delta /= 24;
+            var days = (delta) | 0;
+
+            countdown.innerHTML = days + " days, " + hours + " hours, " + mins + " minutes, " + secs + " seconds"
+
+            if (curTime == target && !partyCalled){
+                party();
+                partyCalled = true;
+            }
+        }
+
+        update();
+        setInterval(update, 100);
+
+        function party(){
+            function _start(){
+                root.className = 'inverted';
+                setTimeout(function(){
+                    root.className = '';
+                }, 1000);
+            }
+            _start();
+            setInterval(_start, 2000);
+        }
+    </script>
+</body>
+</html>
