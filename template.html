@@ -3,102 +3,28 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Matt Ramina</title>
-	<link href='http://fonts.googleapis.com/css?family=Arimo|Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
-	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<div class="header">Matt Ramina</div>
-	<div class="sidebar">
-		<i id="navmenu" class="fa fa-bars"></i>
-		<div id="mattr">@mattr555</div>
-		<a id="portlink" href="#" class="slinks">
-			<i class="fa fa-folder-open-o"></i>Portfolio
-		</a>
-		<a href="/resume.pdf" class="slinks">
-			<i class="fa fa-file-text-o"></i>Resume
-		</a>
-		<a class="slinks" href="mailto:mattramina@gmail.com">
-			<i class="fa fa-envelope-o"></i>mattramina@gmail.com
-		</a>
-		<a class="slinks" href="https://github.com/mattr555">
-			<i class="fa fa-github-alt"></i>GitHub
-		</a>
-		<a class="slinks" href="https://twitter.com/mattr555">
-			<i class="fa fa-twitter"></i>Twitter
-		</a>
-		<a class="slinks" href="https://keybase.io/mattr555">
-			<i class="fa fa-lock"></i>Keybase
-		</a>
-	</div>
-	<div class="content">
-		<h1>Hi!</h1>
-		I'm Matt Ramina. <br>
-		I <a href="https://twitter.com/mattr555">tweet</a>, <a href="https://github.com/mattr555">write software</a>, and attend High Technology High School. But not in that order. <br>
-		I'm an OSS nerd specializing in WebDev. I contribute to projects like:
-		<ul>
-			<li><a href="http://www.apertium.org/">Apertium</a>, through the awesome <a href="https://developers.google.com/open-source/gci/?csw=1">Google Code-In</a></li>
-			<li><a href="http://ddg.gg/">DuckDuckGo</a>, through <a href="http://duckduckhack.com/">DuckDuckHack</a></li>
-		</ul>
-		I have my own projects, of course. Most everything I do is on GitHub, but if it's just a one-file thing I'll probably tweet about it and gist it. My largest/most notable project is the one where I made a <a href="https://github.com/mattr555/AtYourService-school">web app to track NHS hours.</a><br>
-		I also like to play around with physical things (read: robots) using Arduino or VEX, where I've competed with awesome teammates. I also enjoy competitive CS like the <a href="http://acsl.org">American Computer Science League</a> and <a href="http://code.google.com/codejam">Google Code Jam</a>.<br>
-		Some r&eacute;sum&eacute; worthy skills:
-		<ul>
-			<li>Python (lots of it)</li>
-			<li>Django web framework</li>
-			<li>Arduino C (but not real C)</li>
-			<li>I'm ok at JavaScript and can pretend that I know CoffeeScript and PHP</li>
-			<li>Maybe later I'd like to sharpen my front-end skills or even salvage the little Objective-C I know into app development.</li>
-		</ul>
-		<h2>Hacking Competitions</h2>
-		I compete in Capture the Flag (CTF) competitions under the name <b>() { :;}; echo High Tech</b> (a homage to the <a href="https://en.wikipedia.org/wiki/Shellshock_(software_bug)">"Shellshock" bug</a>). My accomplishments include:
-		<ul>
-			<li>picoCTF 2015: 50th</li>
-			<li>sCTF 2015Q1: 57th</li>
-			<li>CTCTF 2015: top 50 (actual unknown, website now defunct)</li>
-			<li>HSCTF 2015: 33rd</li>
-		</ul>
-		<h1 id="portfolio">Portfolio</h1>
-	</div>
-	<div class="port">
-	{% for project in projects %}
-		<div class="pitem">
-			<div class="imgwrap">
-				<div class="imgwrapinner">
-					{% if project.scrot %}
-					<img class="scrot" src="{{project.scrot}}" alt="">
-					{%else%}
-					<img class="scrot" src="http://placekitten.com/g/300/200" alt="">
-					{%endif%}
-				</div>
-			</div>
-
-			{% if project.url %}
-			<a class="titlelink" href="{{project.url}}">{{project.title}}</a>
-			{%else%}
-			<span class="titlelink">{{project.title}}</span>
-			{%endif%}
-
-			{{project.description}}<br>
-
-			{% if project.typeurl %}
-			Type: <a class="typelink" href="{{project.typeurl}}">{{project.type}}</a>
-			{%else%}
-			Type: {{project.type}}
-			{%endif%}
-
-			<div class="langs">
-				{%for lang in project.langs%}
-				<img src="assets/{{lang}}.png" alt="">
-				{%endfor%}
+	<div class="full-screen">
+		<div class="card-wrap">
+			<div class="pic"><img src="assets/profile.jpg"></div>
+			<div class="info">
+				<h1>Matthew Ramina</h1>
+				<h2>CS '21 Rutgers University</h2>
+				<h2>Community Leader, <a href="https://duckduckgo.com/">DuckDuckGo</a></h2>
+				<ul id="siteList">
+					<li><a href="https://github.com/mattr555" data-hover="github.com/mattr555" data-nohover="GitHub">GitHub</a></li>
+					<li><a href="https://twitter.com/mattr555" data-hover="twitter.com/mattr555" data-nohover="Twitter">Twitter</a></li>
+					<li><a href="https://linkedin.com/in/matthew-ramina" data-hover="linkedin.com/in/matthew-ramina" data-nohover="LinkedIn">LinkedIn</a></li>
+					<li><a href="resume.pdf" data-hover="resume.pdf" data-nohover="Resume">Resume</a></li>
+					<li><a href="mailto:mattramina@gmail.com" data-hover="mattramina@gmail.com" data-nohover="Email">Email</a></li>
+				</ul>
 			</div>
 		</div>
-	{%endfor%}
 	</div>
-
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="http://cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js"></script>
-	<script src="http://cdn.jsdelivr.net/headroomjs/0.5.0/jQuery.headroom.min.js"></script>
 	<script src="main.js"></script>
 </body>
 </html>
