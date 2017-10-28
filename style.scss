@@ -1,29 +1,31 @@
 $bgColor: #333;
 $textColor: whitesmoke;
 $monoStack: "Courier New", Courier, monospace;
+$sansStack: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 
 html, body {
 	margin: 0;
 	padding: 0;
+	border: 0;
+	max-width: 100%;
+}
+
+.full-width {
+	width: 100vw;
+	max-width: 100%;
+}
+
+.hero {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	color: $textColor;
 	background-color: $bgColor;
 }
 
-.full-screen {
-	height: 100vh;
-	width: 100vw;	
-}
-
 .card-wrap {
-	width: 600px;
 	height: 200px;
-	margin: auto;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	// background-color: tomato;
 }
 
 .pic, .info {
@@ -42,12 +44,12 @@ html, body {
 
 .info {
 	$lPad: 20px;
-	width: 400px - $lPad;
+	// width: 400px - $lPad;
 	padding-left: $lPad;
 	font-family: $monoStack;
 	
 	h1 {
-		margin: 5px 0;
+		margin: 0 0 5px 0;
 	}
 	h2 {
 		margin-top: 0;
@@ -66,21 +68,98 @@ html, body {
 	}
 }
 
+.port-head {
+	text-align: center;
+	font-family: $monoStack;
+}
+
+$portItemWidth: 300px;
+$portItemHeight: 300px;
+$portItemMargin: 10px;
+$portItemColor: #ddd;
+
+.port-list {
+	// display: flex;
+	// flex-flow: row wrap;
+	// justify-content: space-around;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax($portItemWidth + 2*$portItemMargin, 1fr));
+	grid-auto-rows: $portItemHeight;
+	grid-gap: 2*$portItemMargin;
+	// vertical-align: middle;
+}
+
+.port-item {
+	height: $portItemHeight;
+	width: $portItemWidth;
+	background-color: $portItemColor;
+	margin: $portItemMargin auto;
+	position: relative;
+
+	.imgwrap {
+		height: $portItemHeight / 2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.port-desc {
+		padding: 2px 10px;
+		font-family: $sansStack;
+	}
+
+	.titlelink {
+		font-family: $monoStack;
+		display: block;
+		text-align: center;
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	a {
+		text-decoration-style: dotted;
+		color: inherit !important;
+	}
+
+	.scrot {
+		max-width: 100%;
+		max-height: $portItemHeight / 2;
+	}
+
+	.langs {
+		position: absolute;
+		bottom: 10px;
+		img {
+			display: inline-block;
+			height: 30px;
+			width: 30px;
+			margin-top: 10px;
+			margin-right: 2px;
+		}
+	}
+}
+
 @media only screen and (max-width: 600px) {
 	.pic, .info {
-		display: block;
-		clear: both;
 		height: 50vh;
 		width: 100vw;
+		max-width: 100%;
+		box-sizing: border-box;
 	}
 
 	.pic {
-		margin: 15px;
-		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.info {
+		padding-left: 4vw;
 	}
 
 	.card-wrap {
 		height: 100vh;
 		width: 100vw;
+		max-width: 100%;
 	}
 }

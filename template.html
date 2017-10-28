@@ -7,12 +7,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<div class="full-screen">
+	<div class="hero full-width">
 		<div class="card-wrap">
 			<div class="pic"><img src="assets/profile.jpg"></div>
 			<div class="info">
 				<h1>Matthew Ramina</h1>
-				<h2>CS '21 Rutgers University</h2>
+				<h2>CS '21, Rutgers University</h2>
 				<h2>Community Leader, <a href="https://duckduckgo.com/">DuckDuckGo</a></h2>
 				<ul id="siteList">
 					<li><a href="https://github.com/mattr555" data-hover="github.com/mattr555" data-nohover="GitHub">GitHub</a></li>
@@ -22,6 +22,45 @@
 					<li><a href="mailto:mattramina@gmail.com" data-hover="mattramina@gmail.com" data-nohover="Email">Email</a></li>
 				</ul>
 			</div>
+		</div>
+	</div>
+
+	<div class="full-width">
+		<div class="full-width port-head"><h2>Portfolio</h2></div>
+		<div class="full-width port-list">
+			{% for project in projects %}
+			<div class="port-item">
+				<div class="imgwrap">
+					{% if project.scrot %}
+					<img class="scrot" src="{{project.scrot}}" alt="">
+					{%else%}
+					<img class="scrot" src="http://placekitten.com/g/300/200" alt="">
+					{%endif%}
+				</div>
+
+				<div class="port-desc">
+					{% if project.url %}
+					<a class="titlelink" href="{{project.url}}">{{project.title}}</a>
+					{%else%}
+					<span class="titlelink">{{project.title}}</span>
+					{%endif%}
+
+					{{project.description}}<br>
+
+					{% if project.typeurl %}
+					Type: <a class="typelink" href="{{project.typeurl}}">{{project.type}}</a>
+					{%else%}
+					Type: {{project.type}}
+					{%endif%}
+
+					<div class="langs">
+						{%for lang in project.langs%}
+						<img src="assets/{{lang}}.png" alt="">
+						{%endfor%}
+					</div>
+				</div>
+			</div>
+			{%endfor%}
 		</div>
 	</div>
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
