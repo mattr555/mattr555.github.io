@@ -3,7 +3,7 @@ DuckDuckGo Timer,https://duckduckgo.com/?q=timer,Open Source,Interactive countdo
 DuckDuckGo NJT Finder,https://duckduckgo.com/?q=next+train+from+metropark+to+ny+penn,Open Source,NJ Transit train status embedded in DDG results,"web,python",http://i.imgur.com/iRtZGVG.png,https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/transit/njt/transit_njt.js
 vim-instacode,https://github.com/mattr555/vim-instacode,Open Source,Instacode submission from vim,vim,http://i.imgur.com/9qQjzQD.png,https://github.com/mattr555/vim-instacode
 AtYourService,,Open Source,Platform for NHS Chapters to track service hours of members,"python,django,web",http://i.imgur.com/MdQuCE2.png,https://github.com/mattr555/AtYourService-school
-VEX 2016,https://www.youtube.com/watch?v=o3zccUj_Lss,Closed Source,Robot code for competition in TSA VEX: National Champions,robotc,/assets/vex16.png,
+VEX 2016,https://www.youtube.com/watch?v=o3zccUj_Lss,Closed Source,Robot code for competition in TSA VEX: National Champions,robotc,assets/vex16.png,
 VEX 2015,,Closed Source,Robot code for competiton in TSA VEX: 4th in State,robotc,http://i.imgur.com/ULHPvJh.jpg,
 MATE 2015,,Closed Source,Robot code for competition in MATE ROV Challenge: 2nd in Pennsylvania Region,"arduino,python",http://i.imgur.com/c9uGw6P.png,
 VEX 2014,,Closed Source,Robot code for competiton in TSA VEX: 1st in State,robotc,http://i.imgur.com/78WJIbO.png,
