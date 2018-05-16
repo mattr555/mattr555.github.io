@@ -2,11 +2,13 @@ html, body {
   margin: 0;
   padding: 0;
   border: 0;
-  max-width: 100%; }
+  max-width: 100%;
+}
 
 .full-width {
   width: 100vw;
-  max-width: 100%; }
+  max-width: 100%;
+}
 
 .hero {
   height: 100vh;
@@ -14,103 +16,129 @@ html, body {
   align-items: center;
   justify-content: center;
   color: whitesmoke;
-  background-color: #333; }
+  background-color: #333;
+}
 
 .card-wrap {
-  height: 200px; }
+  height: 200px;
+}
 
 .pic, .info {
   display: inline-block;
-  height: 100%; }
+  height: 100%;
+}
 
 .pic {
   width: 200px;
-  float: left; }
-  .pic img {
-    border-radius: 10px;
-    width: 200px; }
+  float: left;
+}
+.pic img {
+  border-radius: 10px;
+  width: 200px;
+}
 
 .info {
   padding-left: 20px;
-  font-family: "Courier New", Courier, monospace; }
-  .info h1 {
-    margin: 0 0 5px 0; }
-  .info h2 {
-    margin-top: 0;
-    margin-bottom: 3px;
-    font-size: 1.1em; }
-  .info a {
-    text-decoration-style: dotted;
-    color: whitesmoke !important; }
-  .info ul {
-    padding: 0; }
-  .info li {
-    list-style-type: none; }
+  font-family: "Courier New", Courier, monospace;
+}
+.info h1 {
+  margin: 0 0 5px 0;
+}
+.info h2 {
+  margin-top: 0;
+  margin-bottom: 3px;
+  font-size: 1.1em;
+}
+.info a {
+  text-decoration-style: dotted;
+  color: whitesmoke !important;
+}
+.info ul {
+  padding: 0;
+}
+.info li {
+  list-style-type: none;
+}
 
 .port-head {
   text-align: center;
-  font-family: "Courier New", Courier, monospace; }
+  font-family: "Courier New", Courier, monospace;
+}
 
 .port-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-auto-rows: 300px;
-  grid-gap: 20px; }
+  grid-gap: 20px;
+}
 
 .port-item {
   height: 300px;
   width: 300px;
   background-color: #ddd;
   margin: 10px auto;
-  position: relative; }
-  .port-item .imgwrap {
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  .port-item .port-desc {
-    padding: 2px 10px;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
-  .port-item .titlelink {
-    font-family: "Courier New", Courier, monospace;
-    display: block;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold; }
-  .port-item a {
-    text-decoration-style: dotted;
-    color: inherit !important; }
-  .port-item .scrot {
-    max-width: 100%;
-    max-height: 150px; }
-  .port-item .langs {
-    position: absolute;
-    bottom: 10px; }
-    .port-item .langs img {
-      display: inline-block;
-      height: 30px;
-      width: 30px;
-      margin-top: 10px;
-      margin-right: 2px; }
+  position: relative;
+}
+.port-item .imgwrap {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.port-item .port-desc {
+  padding: 2px 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+}
+.port-item .titlelink {
+  font-family: "Courier New", Courier, monospace;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+.port-item a {
+  text-decoration-style: dotted;
+  color: inherit !important;
+}
+.port-item .scrot {
+  max-width: 100%;
+  max-height: 150px;
+}
+.port-item .langs {
+  position: absolute;
+  bottom: 10px;
+}
+.port-item .langs img {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  margin-top: 10px;
+  margin-right: 2px;
+}
 
 @media only screen and (max-width: 600px) {
   .pic, .info {
     height: 50vh;
     width: 100vw;
     max-width: 100%;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+  }
 
   .pic {
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+  }
 
   .info {
-    padding-left: 4vw; }
+    padding-left: 4vw;
+  }
 
   .card-wrap {
     height: 100vh;
     width: 100vw;
-    max-width: 100%; } }
+    max-width: 100%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
